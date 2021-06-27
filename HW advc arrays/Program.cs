@@ -72,19 +72,19 @@ namespace HW_advc_arrays
 			{
 				Console.Write("Enter your guess (1-10) or Q to quit: ");
 				int guess;
-				bool quit = int.TryParse(Console.ReadLine(), int guess);
+				bool quit = !int.TryParse(Console.ReadLine(), out guess);
 				if (quit)
 				{
 					break;
 				}
-				string index;
+				string index = null;
 				for (int i = 0; i < TD_arr.GetLength(0); i++)
 				{
 					for (int j = 0; j < TD_arr.GetLength(1); j++)
 					{
 						if (guess == TD_arr[i, j])
 						{
-							index = $"({i, j})";
+							index = $"({i}, {j})";
 							break;
 						}
 					}
