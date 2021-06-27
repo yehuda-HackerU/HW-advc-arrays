@@ -120,6 +120,70 @@ namespace HW_advc_arrays
 			*/
 			#endregion
 
+			#region ex6
+			/*
+			int[,,] arr = new int[2, 2, 2];
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    for (int k = 0; k < arr.GetLength(2); k++)
+                    {
+                        Console.Write($"Enter a number for position ({i}, {j}, {k}): ");
+						arr[i, j, k] = int.Parse(Console.ReadLine());
+                    }
+                }
+            }
+
+			for (int i = 0; i < arr.GetLength(0); i++)
+			{
+				for (int j = 0; j < arr.GetLength(1); j++)
+				{
+					for (int k = 0; k < arr.GetLength(2); k++)
+					{
+						Console.Write($"{arr[i, j, k], 4}");
+					}
+                    Console.WriteLine();
+				}
+                Console.WriteLine();
+			}
+			*/
+			#endregion
+
+			#region ex7
+			/*
+			int[,] arr = new int[6, 4];
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+			*/
+			#endregion
+			
+			#region ex8
+			/*
+			Random rnd = new Random();
+			int[][] jag_arr = new int[rnd.Next(2, 7)][];
+            for (int i = 0; i < jag_arr.Length; i++)
+            {
+				int[] sub = new int[rnd.Next(2, 10)];
+				jag_arr[i] = sub;
+            }
+
+			for (int i = 0; i < jag_arr.Length; i++)
+			{
+				for (int j = 0; j < jag_arr[i].Length; j++)
+				{
+					Console.Write("* ");
+				}
+				Console.WriteLine();
+			}
+			*/
+			#endregion
 
 
 			Console.WriteLine("Press any key to close...");
