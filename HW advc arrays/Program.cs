@@ -267,7 +267,6 @@ namespace HW_advc_arrays
             Console.ReadKey();
 
             //by: t.me/yehuda100
-			//test
         }
     }
 }
