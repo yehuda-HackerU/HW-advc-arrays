@@ -121,7 +121,7 @@ namespace HW_advc_arrays
             #endregion
 
             #region ex5
-			/*
+            /*
             int[,] arr = new int[3, 3];
             Random rnd = new Random();
             int count = 0;
@@ -226,8 +226,44 @@ namespace HW_advc_arrays
 			*/
             #endregion
 
+            #region ex9
+			/*
+            Console.Write("Enter number of classes: ");
+			int classes = int.Parse(Console.ReadLine());
+			int[][] scool = new int[classes][];
+            for (int i = 0; i < scool.Length; i++)
+            {
+                Console.Write($"Enter the number of studnts in class {i+1}: ");
+				int students = int.Parse(Console.ReadLine());
+				scool[i] = new int[students];
+            }
 
-            Console.WriteLine("Press any key to close...");
+			for (int i = 0; i < scool.Length; i++)
+			{
+				for (int j = 0; j < scool[i].Length; j++)
+				{
+					Console.Write($"Enter the grades for student {j+1} in class {i+1}: ");
+					scool[i][j] = int.Parse(Console.ReadLine());
+				}
+				Console.WriteLine();
+			}
+
+			float high_avg = 0;
+			int win_class = -1;
+            for (int i = 0; i < scool.Length; i++)
+            {
+				float avg = scool[i].Sum() / (float)scool[i].Length;
+				if (avg > high_avg)
+                {
+					high_avg = avg;
+					win_class = i;
+                }
+            }
+            Console.WriteLine($"\nthe highst average grade is in class {win_class +1}. ({high_avg})");
+			*/
+			#endregion
+
+			Console.WriteLine("Press any key to close...");
             Console.ReadKey();
 
             //by: t.me/yehuda100
