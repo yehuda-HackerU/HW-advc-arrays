@@ -10,8 +10,8 @@ namespace HW_advc_arrays
     {
         static void Main(string[] args)
         {
-			#region ex2
-			/*
+            #region ex2
+            /*
 			//creating an array of 10 random numbers.
 			int[] arr = new int[10];
 			Random rnd = new Random();
@@ -55,10 +55,10 @@ namespace HW_advc_arrays
 
 			Console.WriteLine();
 			*/
-			#endregion
+            #endregion
 
-			#region ex3
-			/*
+            #region ex3
+            /*
 			int [,] TD_arr = new int [5, 5];
 			Random rnd = new Random();
 			for (int i = 0; i < TD_arr.GetLength(0); i++)
@@ -96,10 +96,10 @@ namespace HW_advc_arrays
 				}
 			}
 			*/
-			#endregion
+            #endregion
 
-			#region ex4
-			/*
+            #region ex4
+            /*
 			int[,] mul_tab = new int[10, 10];
 			for (int i = 0; i < mul_tab.GetLength(0); i++)
 			{
@@ -118,10 +118,51 @@ namespace HW_advc_arrays
 				Console.WriteLine();
 			}
 			*/
-			#endregion
+            #endregion
 
-			#region ex6
+            #region ex5
 			/*
+            int[,] arr = new int[3, 3];
+            Random rnd = new Random();
+            int count = 0;
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    if (rnd.Next(0, 2) == 1)
+                    {
+                        arr[i, j] = 1;
+                        count++;
+                    }
+                }
+            }
+
+            int attempts = 0;
+            while (count > 0)
+            {
+                Console.Write("Enter index (1-3), (1-3): ");
+				int x = (Console.ReadKey().KeyChar - '0') -1;
+                Console.Write(", ");
+				int y = (Console.ReadKey().KeyChar - '0') - 1;
+				if (arr[x, y] == 1)
+                {
+                    Console.WriteLine("  Boom!");
+					count--;
+					attempts++;
+					arr[x, y] = 0;
+                }
+				else
+                {
+                    Console.WriteLine("  Miss...");
+					attempts++;
+                }
+			}
+            Console.WriteLine($"\nyou tried {attempts} times.");
+			*/
+            #endregion
+
+            #region ex6
+            /*
 			int[,,] arr = new int[2, 2, 2];
             for (int i = 0; i < arr.GetLength(0); i++)
             {
@@ -148,10 +189,10 @@ namespace HW_advc_arrays
                 Console.WriteLine();
 			}
 			*/
-			#endregion
+            #endregion
 
-			#region ex7
-			/*
+            #region ex7
+            /*
 			int[,] arr = new int[6, 4];
             for (int i = 0; i < arr.GetLength(0); i++)
             {
@@ -162,10 +203,10 @@ namespace HW_advc_arrays
                 Console.WriteLine();
             }
 			*/
-			#endregion
-			
-			#region ex8
-			/*
+            #endregion
+
+            #region ex8
+            /*
 			Random rnd = new Random();
 			int[][] jag_arr = new int[rnd.Next(2, 7)][];
             for (int i = 0; i < jag_arr.Length; i++)
@@ -183,13 +224,13 @@ namespace HW_advc_arrays
 				Console.WriteLine();
 			}
 			*/
-			#endregion
+            #endregion
 
 
-			Console.WriteLine("Press any key to close...");
-			Console.ReadKey();
+            Console.WriteLine("Press any key to close...");
+            Console.ReadKey();
 
-			//by: t.me/yehuda100
-		}
-	}
+            //by: t.me/yehuda100
+        }
+    }
 }
